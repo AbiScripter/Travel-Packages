@@ -7,12 +7,14 @@ export default function Form({ onAddItems }) {
   function handleSubmit(e) {
     e.preventDefault();
 
+    //if description is empty
     if (!description) {
       return;
     }
 
+    //creating new items based on the description and quantity
     const newItem = {
-      id: 1,
+      id: Date.now(), //using current time as id
       description: description,
       quantity: quantity,
       packed: false,
@@ -27,8 +29,9 @@ export default function Form({ onAddItems }) {
   }
 
   return (
+    //onSubmit submits the form either ENTER or ADD Clicked
     <form className="add-form" onSubmit={handleSubmit}>
-      <>What do you need for your trip?</>
+      <span>What do you need for your trip?</span>
 
       <select
         value={quantity}
