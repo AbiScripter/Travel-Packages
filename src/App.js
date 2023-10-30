@@ -25,6 +25,12 @@ function App() {
     );
   }
 
+  function handleClearList() {
+    let confirmed = window.confirm("Are you sure you want to delet all items?");
+
+    if (confirmed) setItems([]);
+  }
+
   return (
     <>
       <Logo />
@@ -33,6 +39,7 @@ function App() {
         items={items}
         onDeleteItem={handleDeleteItem}
         onToggleItem={handleToggleItem}
+        onClearList={handleClearList}
       />
       <Stats items={items} />
     </>
