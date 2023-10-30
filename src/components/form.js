@@ -20,7 +20,7 @@ export default function Form({ onAddItems }) {
       packed: false,
     };
 
-    //added this function via props from App.js
+    //passing newItem on onAdditem , handleAddItems function is  passed as a prop[onAddItem]
     onAddItems(newItem);
 
     //setting to inital state after adding the new one

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { isValidElement, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Logo from "./components/logo";
 import Stats from "./components/stats";
@@ -34,7 +34,7 @@ function App() {
         onDeleteItem={handleDeleteItem}
         onToggleItem={handleToggleItem}
       />
-      <Stats />
+      <Stats items={items} />
     </>
   );
 }
