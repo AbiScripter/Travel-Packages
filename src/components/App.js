@@ -1,9 +1,9 @@
 import React, { isValidElement, useState } from "react";
 import ReactDOM from "react-dom/client";
-import Logo from "./components/logo";
-import Stats from "./components/stats";
-import PackingList from "./components/packingList";
-import Form from "./components/form";
+import Logo from "./logo";
+import Stats from "./stats";
+import PackingList from "./packingList";
+import Form from "./form";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -13,7 +13,6 @@ function App() {
   }
 
   function handleDeleteItem(id) {
-    // console.log(id);
     setItems((items) => items.filter((item) => item.id !== id));
   }
 

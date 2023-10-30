@@ -1,5 +1,4 @@
 export default function Item({ item, onDeleteItem, onToggleItem }) {
-  // console.log(item);
   return (
     <li className="item">
       <input

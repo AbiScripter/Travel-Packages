@@ -1,7 +1,4 @@
-// import React from "react";
-
-function Stats({ items }) {
-  // console.log(items);
+export default function Stats({ items }) {
   const numItems = items.length;
   const numPacked = items.filter((item) => item.packed).length;
   const percentPacked = Math.round((numPacked / numItems) * 100);
@@ -18,5 +15,3 @@ function Stats({ items }) {
     </footer>
   );
 }
-
-export default Stats;
